@@ -1,0 +1,46 @@
+{
+    "name": "prestashopheaven/runtime-cart",
+    "description": "Cart helpers: the link that reopens a customer's cart from an email (PrestaShop's own recover_cart link, which also logs the customer in).",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "George van Engers",
+            "email": "vanengers@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "PrestaShopHeaven\\Runtime\\Cart\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PrestaShopHeaven\\Runtime\\Cart\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        },
+        "prestashopheaven": {
+            "kind": "runtime",
+            "use-when": "A module emails a customer a link back to their cart: an abandoned-cart reminder, a quote, a cart prepared by the merchant.",
+            "keywords": [
+                "cart",
+                "recover-cart",
+                "abandoned-cart",
+                "link",
+                "email",
+                "token_cart",
+                "checkout"
+            ],
+            "integration-tested": [
+                "src/CartRecoveryLink.php"
+            ]
+        }
+    }
+}
